@@ -29,7 +29,7 @@ a, a:hover, a:active, a:visited, a:focus {
 
 /* Header */
 .navbar-around {
-    background: #325f85;
+    background: #8f3fa9;
     min-height: 61px;
     margin-bottom: 0;
     border-bottom: 0;
@@ -565,21 +565,23 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 .new-post-box .btn-add-image:hover {
-    background: #d9d9d9;
-    border-color: #c8c8c8
+   background: #8f3fa9;
+    border-color: #b074cc;
+    color: white;
 }
 
+
 .new-post-box .btn-submit {
-    background: #488ec9;
-    border-color: #3c76a7;
+    background: #b074cc;
+    border-color: #8f3fa9;
     padding-left: 20px;
     padding-right: 20px;
     color: #fff
 }
 
 .new-post-box .btn-submit:hover {
-    background: #3c76a7;
-    border-color: #2e5679;
+    background: #8f3fa9;
+    border-color: #b074cc;
 }
 
 .new-post-box .loading-post {
