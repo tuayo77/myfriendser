@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
-        $hobbies = ["Reading","Watching TV","Family Time","Going to Movies","Fishing","Computer","Gardening","Renting Movies","Walking","Exercise","Listening to Music","Entertaining","Hunting","Team Sports","Shopping","Traveling","Sleeping","Socializing","Sewing","Golf","Church Activities","Relaxing","Playing Music","Housework","Crafts","Watching Sports","Bicycling","Playing Cards","Hiking","Cooking","Eating Out","Dating Online","Swimming","Camping","Skiing","Working on Cars","Writing","Boating","Motorcycling","Animal Care","Bowling","Painting","Running","Dancing","Horseback Riding","Tennis","Theater","Billiards","Beach","Volunteer Work"];
+        $hobbies = ["lecture","Regarder la télévision","Passer Du temps en famille","Aller aux cinema","Pêche","Ordinateur","Jardinage","Location de films","Marcher","faire du sport","Ecouter de la Music","Divertissant","Chasse","Sports en equipe","Shopping","Voyager","Dormir","Socialiser","Couture","Golf","Activités de l'église","Relaxer","Travaux ménagers","Artisanat","Regarder des sports","Faire du vélo","Jouer aux cartes","Randonnée","Preparer","Rencontre en ligne","La natation","Camper","Ski","Travailler sur les voitures","L'écriture","Faire de la moto","Prendre Soins des animaux","Bowling","La peinture","Courir","Dancer","Équitation","Tennis","Theatre","Billiards","Plage","Bénévolat"];
 
 
 

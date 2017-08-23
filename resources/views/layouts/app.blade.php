@@ -40,7 +40,9 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="{{ asset('images/logo.png') }}" alt="" />
+                    <div class="navbar-test">
+                    <i class="fa fa-home"> MyFriendser</i>
+                </div>
                 </a>
             </div>
 
@@ -128,6 +130,7 @@
 <script src="{{ asset('plugins/jquery.serializeJSON/jquery.serializejson.min.js') }}"></script>
 <script src="{{ asset('plugins/fancybox/dist/jquery.fancybox.min.js') }}"></script>
 <script src="{{ asset('plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js') }}"></script>
+
 <script src="{{ asset('plugins/bootstrap3-dialog/dist/js/bootstrap-dialog.min.js') }}"></script>
 <script src="{{ asset('plugins/select2/dist/js/select2.full.min.js') }}"></script>
 <script src="//maps.google.com/maps/api/js?key=<?=config('googlemaps.key')?>"></script>
@@ -135,6 +138,8 @@
 <script src="{{ asset('js/around.js') }}"></script>
 <script src="{{ asset('js/wall.js') }}"></script>
 <script src="{{ asset('js/notifications.js') }}"></script>
+
+
 @yield('footer')
 <script type="text/javascript">
     @if(!Auth::user()->has('location'))

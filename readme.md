@@ -1,12 +1,9 @@
 ## Laravel 5 - Simple Location-Based Social Network 
-It's location-based social network developed by [lvntayn](https://github.com/lvntayn), [theoneremains](https://github.com/theoneremains) and [koniqwe](https://github.com/koniqwe) using the Laravel PHP framework.
+It's location-based social network developed by [tuayo77](https://github.com/tuayo77),using the Laravel PHP framework.
 
-Live - https://around.kim
-
-Demo Pages - https://github.com/lvntayn/laravel-social-network/tree/master/public/images/demo
 
 ### Installation
-* git clone https://github.com/lvntayn/laravel-social-network.git projectname
+* git clone https://github.com/tuayo77/laravel-social-network.git projectname
 * cd projectname
 * composer install
 * php artisan key:generate to regenerate secure key
@@ -60,11 +57,5 @@ There are 7 pages. which are Home Page for Login and Sign Up,  TimeLine, Direct 
 
 
 ### Authors
-**lvntayn**
-- https://github.com/lvntayn
-
-**theoneremains**
-- https://github.com/theoneremains
-
-**koniqwe**
-- https://github.com/koniqwe
+**tuayo77**
+- https://github.com/tuayo77

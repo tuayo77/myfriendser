@@ -22,7 +22,43 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-              Découvrez votre environnement. Partagez vos hobbies. Rencontrez de nouvelles personnes avec Myfriendser!
+             {{-- message du home --}}
+
+ <div class="hidden-xs col-sm-5 col-md-6 col-lg-8 pull-left info-text">
+ <!--Connectez-vous à vos amis — et d'autres personnes fascinantes. Recevez des mises à jour instantanées sur les choses qui vous intéressent. Et rejardez les événements se dérouler, en temps réel, sous tous les angles.
+-->
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <!--img src="images/1.jpg" alt="..."--> 
+    Retrouver des styles comme vous n'avez jamais vue <br>  
+
+      <div class="carousel-caption">
+      
+      </div>
+    </div>
+    <div class="item">
+      <!--img src="images/2.jpg" alt="..."-->
+    Partagez vos expériences avec des gens dans tous les coins.
+      <div class="carousel-caption">
+      
+      </div>
+    </div>
+     <div class="item">
+      <!--img src="images/2.jpg" alt="..."-->
+       Trouvez de l'inspiration qu'importe le style et <br> <br>
+         Participez à nos nombreuses soirées à thème
+      <div class="carousel-caption">
+        
+      </div>
+    </div>
+  </div>
+  </a>
+
+</div>
+</div> 
+             {{-- fin message du home --}}
             </div>
         </div>
     </div>
@@ -32,7 +68,7 @@
     <div class="row">
         <div class="col-md-6">
             <a href="{{ url('/') }}" class="logo">
-                <img src="{{ asset('images/guest_logo.png') }}" alt="" />
+               {{--  <img src="{{ asset('images/guest_logo.png') }}" alt="" /> --}}
             </a>
         </div>
 
@@ -74,5 +110,7 @@
 <!-- Scripts -->
 <script src="{{ asset('plugins/jquery/jquery-3.2.1.min.js') }}"></script>
 <script src="{{ asset('plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('plugins/jquery.backstretch/jquery.backstretch.js')}}"></script>
+<script src="{{ asset('js/background.js')}}"></script>
 </body>
 </html>

@@ -29,7 +29,7 @@ a, a:hover, a:active, a:visited, a:focus {
 
 /* Header */
 .navbar-around {
-    background: #8f3fa9;
+    background: #b074cc;
     min-height: 61px;
     margin-bottom: 0;
     border-bottom: 0;
@@ -130,6 +130,10 @@ a, a:hover, a:active, a:visited, a:focus {
     font-size: 23px;
     margin-top: 10px;
     padding: 0 10px;
+}
+.navbar-test{
+    color: #fff;
+    padding-top: 10%;
 }
 
 .badge-notify{
@@ -614,6 +618,10 @@ a, a:hover, a:active, a:visited, a:focus {
 .new-post-box .image-remove-button:hover {
     color: #000;
 }
+/*menu*/
+.menu{
+    border-color: #dd9bf3;
+}
 
 /* Post List */
 .panel-post {
@@ -907,7 +915,9 @@ a, a:hover, a:active, a:visited, a:focus {
 
 /* User Card */
 .user-card {
-    background: #fff;
+   background: #b074cc;
+    border-color: #dd9bf3;
+    color: #fff;
 }
 
 .user-card .cover {

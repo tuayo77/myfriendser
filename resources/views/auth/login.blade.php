@@ -2,7 +2,7 @@
     <input type="hidden" value="login" name="tab" />
     {{ csrf_field() }}
 
-    <h2>Connectez-vous avec MyFriendser aux personnes!</h2>
+    <h2 class="title">Bienvenue sur myfriendser</h2>
 
 
 

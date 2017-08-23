@@ -50,11 +50,12 @@ input:-webkit-autofill:active {
     cursor: pointer;
     text-decoration: none;
     text-align: center;
-    background: rgba(59, 105, 145, 0.8);
+    background: rgba(176, 116, 204, 0.62);
 }
 
 .tab_container label{
     margin-bottom: 0;
+    color: #fff;
 }
 
 
@@ -68,14 +69,14 @@ input:-webkit-autofill:active {
 #tab5:checked ~ .contents #content5 {
     display: block;
     padding: 20px 35px 50px 35px;
-    background: #fff;
+    background: rgba(203, 104, 249, 0.47);
     color: #999;
     box-sizing: border-box;
 }
 
 
 .tab_container [id^="tab"]:checked + .head, .tab_container .head:hover {
-    background: rgba(11, 75, 134, 0.8);
+    background: rgba(181, 80, 228, 0.86);
 }
 
 
@@ -87,7 +88,7 @@ input:-webkit-autofill:active {
 
 
 .tab_container section h2 {
-    color: #292929;
+    color: #fff;
     font-size: 22px;
     padding: 0;
     margin: 15px 0 30px 0;
@@ -104,7 +105,7 @@ input:-webkit-autofill:active {
 }
 
 .tab_container .form-group .control-label{
-    color: #292929;
+    color: #fff;
     font-size: 14px;
     font-weight: normal;
 }
@@ -134,7 +135,7 @@ input:-webkit-autofill:active {
 
 
 .banner{
-    background: rgba(59, 143, 145, 0.5);
+    background: rgb(172, 86, 213, 0.54);
     color: #fff;
     padding: 20px 10px;
     box-sizing: border-box;
@@ -332,7 +333,7 @@ input:-webkit-autofill:active {
     background-color: #5cb85c; }
 
 .btn-login{
-    background: #409aff;
+    background: #8f3fa9;
     border: none;
     display: block;
     width: 100%;
@@ -361,7 +362,7 @@ input:-webkit-autofill:active {
 
 
 .btn-register{
-    background: #43b951;
+    background: #8f3fa9;
     border: none;
     display: block;
     width: 100%;
@@ -370,7 +371,7 @@ input:-webkit-autofill:active {
 }
 
 .btn-register:hover {
-    background: #2f8239;
+    background: #b074cc;
 }
 
 .sub-title{
@@ -450,6 +451,8 @@ input:-webkit-autofill:active {
         width: 100%;
     }
 }
-
-
+/*h2 .title{
+    color: #fff !important;
+}
+*/
 
