@@ -9,13 +9,20 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Myfriendser') }}</title>
-
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="{{ asset('plugins/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('plugins/pace-master/themes/white/pace-theme-flash.css') }}" rel="stylesheet">
+    <link href="{{ asset('plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('plugins/fancybox/dist/jquery.fancybox.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('plugins/bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('plugins/bootstrap3-dialog/dist/css/bootstrap-dialog.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('plugins/select2/dist/css/select2.min.css') }}" rel="stylesheet">
+     <link href="{{ asset('css/around.css') }}" rel="stylesheet">
+      <link href="{{ asset('css/guest.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-default navbar-static-top navbar-around">
             <div class="container">
                 <div class="navbar-header">
 
@@ -28,7 +35,7 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="btn btn-default" href="{{ url('/') }}">
                         {{ config('app.name', 'Myfriendser') }}
                     </a>
                 </div>
@@ -43,8 +50,8 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><a href="{{ route('login') }}">Connexion</a></li>
-                            <li><a href="{{ route('register') }}">Inscrption</a></li>
+                            <li><a href="{{ route('login') }}" class="btn btn-default">Connexion</a></li>
+                            <li><a href="{{ route('register') }}" class="btn btn-default">Inscrption</a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">

@@ -33,7 +33,7 @@ a, a:hover, a:active, a:visited, a:focus {
     min-height: 61px;
     margin-bottom: 0;
     border-bottom: 0;
-    position: fixed;
+   /* position: fixed;*/
     top: 0;
     left: 0;
     width: 100%;

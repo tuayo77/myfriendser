@@ -246,7 +246,7 @@ class Swift_Transport_StreamBuffer extends Swift_ByteStream_AbstractFilterableIn
      * Establishes a connection to a remote server.
      */
     private function _establishSocketConnection()
-    {
+    {   
         $host = $this->_params['host'];
         if (!empty($this->_params['protocol'])) {
             $host = $this->_params['protocol'].'://'.$host;
