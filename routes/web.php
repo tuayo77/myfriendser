@@ -16,7 +16,13 @@ Route::group(['middleware' => 'guest'], function () {
         return view('layouts.guest');
     });
 });
+// info route
 
+Route::get('/terms',function(){
+	return view('info.terms');
+});
+
+// fin info route
 
 Auth::routes();
 
