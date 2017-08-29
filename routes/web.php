@@ -20,7 +20,7 @@ Route::group(['middleware' => 'guest'], function () {
 
 Route::get('/terms',function(){
 	return view('info.terms');
-});
+})->name('terms');
 
 // fin info route
 

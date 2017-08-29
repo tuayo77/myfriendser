@@ -85,19 +85,16 @@
                 <div class="contents">
                     <section id="content1" class="tab-content">
 
-                        @include('auth.login')
+                        @include('auth.login2')
 
                     </section>
 
                     <section id="content2" class="tab-content">
-                        @include('auth.register')
+                        @include('auth.register2')
 
                     </section>
                 </div>
             </div>
-
-
-
         </div>
 
     </div>

@@ -131,5 +131,6 @@ Le payement manuel : Ce payement est effectué aux personnes agréées. Il revie
     </div>
   </div>
 </div>
+ <a class="btn btn-login" href=" {{route('home')}} "> Retour </a>
 </div>
 @stop

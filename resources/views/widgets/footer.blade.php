@@ -3,7 +3,7 @@
         <div class="col-sm-6">
         </div>
         <div class="col-sm-8 text-left">
-         <a href="/terms" class="btn btn-link">
+         <a href="{{route('terms')}}" class="btn btn-link">
          Conditions d'utilisations
          </a>
          -

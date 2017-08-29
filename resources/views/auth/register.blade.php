@@ -1,3 +1,5 @@
+@extends('layouts.app2')
+@section('content')
 <form class="register" role="form" method="POST" action="{{ route('register') }}">
     <input type="hidden" value="register" name="tab" />
     {{ csrf_field() }}
@@ -107,3 +109,4 @@
         </div>
     </div>
 </form>
+@stop

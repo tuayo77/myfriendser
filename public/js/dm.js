@@ -140,12 +140,12 @@ function showChat(id){
                 $(".dm .chat .message-list").animate({ scrollTop: $('.dm .chat .message-list').prop("scrollHeight")}, 0);
             }else{
                 $('#errorMessageModal').modal('show');
-                $('#errorMessageModal #errors').html('Something went wrong!');
+                $('#errorMessageModal #errors').html('Il y\'a eu un probleme!');
             }
         },
         error: function () {
             $('#errorMessageModal').modal('show');
-            $('#errorMessageModal #errors').html('Something went wrong!');
+            $('#errorMessageModal #errors').html('Il y\'a eu un probleme!');
         }
     });
 }
@@ -179,12 +179,12 @@ function sendMessage(e){
                         $(".dm .chat .message-list").animate({ scrollTop: $('.dm .chat .message-list').prop("scrollHeight")}, 1000);
                     } else {
                         $('#errorMessageModal').modal('show');
-                        $('#errorMessageModal #errors').html('Something went wrong!');
+                        $('#errorMessageModal #errors').html('Il y\'a eu un probleme!');
                     }
                 },
                 error: function () {
                     $('#errorMessageModal').modal('show');
-                    $('#errorMessageModal #errors').html('Something went wrong!');
+                    $('#errorMessageModal #errors').html('Il y\'a eu un probleme!');
                 }
             });
         }
@@ -195,10 +195,10 @@ function sendMessage(e){
 function deleteChat(id){
 
     BootstrapDialog.show({
-        title: 'Chat Delete!',
-        message: 'Are you sure to delete chat ?',
+        title: 'suppression du chat',
+        message: 'Ete vous sure de vouloir supprimer le chat ?',
         buttons: [{
-            label: "Yes, I'm Sure!",
+            label: "Oui ! je suis sure",
             cssClass: 'btn-danger',
             action: function(dialog) {
 
@@ -222,13 +222,13 @@ function deleteChat(id){
                             $('#chat-people-list-'+id).remove();
                         }else{
                             $('#errorMessageModal').modal('show');
-                            $('#errorMessageModal #errors').html('Something went wrong!');
+                            $('#errorMessageModal #errors').html('Il y\'a eu un probleme!');
                         }
                     },
                     error: function(){
                         dialog.close();
                         $('#errorMessageModal').modal('show');
-                        $('#errorMessageModal #errors').html('Something went wrong!');
+                        $('#errorMessageModal #errors').html('Il y\'a eu un probleme!');
                     }
                 });
             }
@@ -244,10 +244,10 @@ function deleteChat(id){
 function deleteMessage(id){
 
     BootstrapDialog.show({
-        title: 'Message Delete!',
-        message: 'Are you sure to delete message ?',
+        title: 'suppression du message',
+        message: 'ete vous sur de vouloir supprimer le message ?',
         buttons: [{
-            label: "Yes, I'm Sure!",
+            label: "Oui! je suis sure",
             cssClass: 'btn-danger',
             action: function(dialog) {
 
@@ -270,13 +270,13 @@ function deleteMessage(id){
                             $('.dm .chat #chat-message-'+id).remove();
                         }else{
                             $('#errorMessageModal').modal('show');
-                            $('#errorMessageModal #errors').html('Something went wrong!');
+                            $('#errorMessageModal #errors').html('Il y\'a eu un probleme!');
                         }
                     },
                     error: function(){
                         dialog.close();
                         $('#errorMessageModal').modal('show');
-                        $('#errorMessageModal #errors').html('Something went wrong!');
+                        $('#errorMessageModal #errors').html('Il y\'a eu un probleme!');
                     }
                 });
             }

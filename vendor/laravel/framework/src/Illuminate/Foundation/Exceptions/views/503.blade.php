@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Service Unavailable</title>
+        <title>MyFriendser en maintenance</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -13,7 +13,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                background-color: #f9a7ff;
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
@@ -40,7 +40,10 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 64px;
+            }
+             .sub_title {
+                font-size: 24px;
             }
         </style>
     </head>
@@ -48,8 +51,13 @@
         <div class="flex-center position-ref full-height">
             <div class="content">
                 <div class="title">
-                    Be right back.
+                   MyFriendser est actuellement en maintenance  
                 </div>
+                <br>
+                <br>
+                <div class="sub_title">
+                    Revenez ulterieurement merci  
+                </div>    
             </div>
         </div>
     </body>

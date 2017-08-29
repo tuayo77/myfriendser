@@ -9,7 +9,7 @@ $(function() {
 
     $(".select2-multiple").select2();
     $(".js-example-placeholder-single").select2({
-        placeholder: "Select a state",
+        placeholder: "selectionez un pays",
         allowClear: true
     });
 
@@ -32,7 +32,7 @@ function getLocation() {
         return navigator.geolocation.getCurrentPosition(showPosition, showError);
     } else {
         $('#errorMessageModal').modal('show');
-        $('#errorMessageModal #errors').html("Geolocation is not supported by this browser.");
+        $('#errorMessageModal #errors').html("votre navigateur actuel ne supporte pas la geolocation.");
     }
 }
 
@@ -46,16 +46,16 @@ function showError(error) {
     var error_msg = null;
     switch(error.code) {
         case error.PERMISSION_DENIED:
-            error_msg = "You denied the request for Geolocation.";
+            error_msg = "vous avez refusé la geolocation";
             break;
         case error.POSITION_UNAVAILABLE:
-            error_msg = "Location information is unavailable.";
+            error_msg = "votre localisation est indisponible.";
             break;
         case error.TIMEOUT:
-            error_msg = "The request to get user location timed out.";
+            error_msg = "la recherche de votre localisation a prit trop de temps.";
             break;
         case error.UNKNOWN_ERROR:
-            error_msg = "An unknown error occurred.";
+            error_msg = "Une erreur inconnu c'est produite.";
             break;
     }
     $('#errorMessageModal').modal('show');
@@ -157,12 +157,12 @@ function follow(following, follower, element, size){
                 }
             } else {
                 $('#errorMessageModal').modal('show');
-                $('#errorMessageModal #errors').html('Something went wrong!');
+                $('#errorMessageModal #errors').html('Il y\'a eu un probleme!');
             }
         },
         error: function () {
             $('#errorMessageModal').modal('show');
-            $('#errorMessageModal #errors').html('Something went wrong!');
+            $('#errorMessageModal #errors').html('Il y\'a eu un probleme!');
         }
     });
 
@@ -193,12 +193,12 @@ function followRequest(type, id){
                 }
             } else {
                 $('#errorMessageModal').modal('show');
-                $('#errorMessageModal #errors').html('Something went wrong!');
+                $('#errorMessageModal #errors').html('Il y\'a eu un probleme!');
             }
         },
         error: function () {
             $('#errorMessageModal').modal('show');
-            $('#errorMessageModal #errors').html('Something went wrong!');
+            $('#errorMessageModal #errors').html('Il y\'a eu un probleme!');
         }
     });
 
@@ -227,12 +227,12 @@ function deniedFollow(me, follower, element, size){
                 location.reload();
             } else {
                 $('#errorMessageModal').modal('show');
-                $('#errorMessageModal #errors').html('Something went wrong!');
+                $('#errorMessageModal #errors').html('Il y\'a eu un probleme!');
             }
         },
         error: function () {
             $('#errorMessageModal').modal('show');
-            $('#errorMessageModal #errors').html('Something went wrong!');
+            $('#errorMessageModal #errors').html('Il y\'a eu un probleme!');
         }
     });
 
@@ -264,12 +264,12 @@ function relativeRequest(type, id){
                 }
             } else {
                 $('#errorMessageModal').modal('show');
-                $('#errorMessageModal #errors').html('Something went wrong!');
+                $('#errorMessageModal #errors').html('Il y\'a eu un probleme!');
             }
         },
         error: function () {
             $('#errorMessageModal').modal('show');
-            $('#errorMessageModal #errors').html('Something went wrong!');
+            $('#errorMessageModal #errors').html('Il y\'a eu un probleme!');
         }
     });
 
@@ -278,10 +278,10 @@ function relativeRequest(type, id){
 function removeRelation(type, id){
 
     BootstrapDialog.show({
-        title: 'Relationship Delete!',
-        message: 'Are you sure to delete ?',
+        title: 'supprimer la relation!',
+        message: 'ete vous sure de vouloir supprimer ?',
         buttons: [{
-            label: "Yes, I'm Sure!",
+            label: "Oui, je suis sure!",
             cssClass: 'btn-danger',
             action: function(dialog) {
 
@@ -305,13 +305,13 @@ function removeRelation(type, id){
                             location.reload();
                         }else{
                             $('#errorMessageModal').modal('show');
-                            $('#errorMessageModal #errors').html('Something went wrong!');
+                            $('#errorMessageModal #errors').html('Il y\'a eu un probleme!');
                         }
                     },
                     error: function(){
                         dialog.close();
                         $('#errorMessageModal').modal('show');
-                        $('#errorMessageModal #errors').html('Something went wrong!');
+                        $('#errorMessageModal #errors').html('Il y\'a eu un probleme !');
                     }
                 });
             }

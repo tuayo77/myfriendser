@@ -100,7 +100,7 @@ function newPost(){
         },
         error: function(){
             $('#errorMessageModal').modal('show');
-            $('#errorMessageModal #errors').html('Something went wrong!');
+            $('#errorMessageModal #errors').html('Il y\'a eu un probleme!');
             $(form_name + ' .loading-post').hide();
         }
     });
@@ -182,10 +182,10 @@ function fetchForOlderPosts(){
 function deletePost(id){
 
     BootstrapDialog.show({
-        title: 'Post Delete!',
-        message: 'Are you sure to delete post ?',
+        title: 'suppression du post',
+        message: 'ete vous sur de vouloir supprimer le post ?',
         buttons: [{
-            label: "Yes, I'm Sure!",
+            label: "Oui! suis sur",
             cssClass: 'btn-danger',
             action: function(dialog) {
 
@@ -205,10 +205,10 @@ function deletePost(id){
                     success: function(response){
                         dialog.close();
                         if (response.code == 200){
-                            $('#panel-post-'+id).html("Post deleted!");
+                            $('#panel-post-'+id).html("Le post a été supprimer");
                         }else{
                             $('#errorMessageModal').modal('show');
-                            $('#errorMessageModal #errors').html('Something went wrong!');
+                            $('#errorMessageModal #errors').html('Il y\'a eu un probleme!');
                         }
                     },
                     error: function(){
@@ -258,12 +258,12 @@ function likePost(id){
                 }
             }else{
                 $('#errorMessageModal').modal('show');
-                $('#errorMessageModal #errors').html('Something went wrong!');
+                $('#errorMessageModal #errors').html('Il y\'a eu un probleme!');
             }
         },
         error: function(){
             $('#errorMessageModal').modal('show');
-            $('#errorMessageModal #errors').html('Something went wrong!');
+            $('#errorMessageModal #errors').html('Il y\'a eu un probleme!');
         }
     });
 }
@@ -277,7 +277,7 @@ function submitComment(id){
 
     if (comment.trim() == ''){
         $('#errorMessageModal').modal('show');
-        $('#errorMessageModal #errors').html('Please write comment!');
+        $('#errorMessageModal #errors').html('Entrer un commentaire !');
     }else {
         $.ajax({
             url: BASE_URL + '/posts/comment',
@@ -295,12 +295,12 @@ function submitComment(id){
                     $('#panel-post-'+id+' .post-comments').append(response.comment);
                 } else {
                     $('#errorMessageModal').modal('show');
-                    $('#errorMessageModal #errors').html('Something went wrong!');
+                    $('#errorMessageModal #errors').html('Il y\'a eu un probleme!');
                 }
             },
             error: function () {
                 $('#errorMessageModal').modal('show');
-                $('#errorMessageModal #errors').html('Something went wrong!');
+                $('#errorMessageModal #errors').html('Il y\'a eu un probleme!');
             }
         });
     }
@@ -310,10 +310,10 @@ function submitComment(id){
 function removeComment(id, post_id){
 
     BootstrapDialog.show({
-        title: 'Comment Delete!',
-        message: 'Are you sure to delete comment ?',
+        title: 'suppression du commentaire',
+        message: 'ete vous Sure de vouloir supprimer le commentaire ?',
         buttons: [{
-            label: "Yes, I'm Sure!",
+            label: "Oui! suis sur",
             cssClass: 'btn-danger',
             action: function(dialog) {
 
@@ -333,17 +333,17 @@ function removeComment(id, post_id){
                     success: function(response){
                         dialog.close();
                         if (response.code == 200){
-                            $('#post-comment-'+id+' .panel-body').html("<p><small>Comment deleted!</small></p>");
+                            $('#post-comment-'+id+' .panel-body').html("<p><small>Le commentaire a été supprimer</small></p>");
                             $('#panel-post-'+post_id+' .comments-title').html(response.comments_title);
                         }else{
                             $('#errorMessageModal').modal('show');
-                            $('#errorMessageModal #errors').html('Something went wrong!');
+                            $('#errorMessageModal #errors').html('Il y\'a eu un probleme!');
                         }
                     },
                     error: function(){
                         dialog.close();
                         $('#errorMessageModal').modal('show');
-                        $('#errorMessageModal #errors').html('Something went wrong!');
+                        $('#errorMessageModal #errors').html('Il y\'a eu un probleme!');
                     }
                 });
             }
@@ -378,12 +378,12 @@ function showLikes(id){
                 $('#likeListModal').modal('show');
             } else {
                 $('#errorMessageModal').modal('show');
-                $('#errorMessageModal #errors').html('Something went wrong!');
+                $('#errorMessageModal #errors').html('Il y\'a eu un probleme!');
             }
         },
         error: function () {
             $('#errorMessageModal').modal('show');
-            $('#errorMessageModal #errors').html('Something went wrong!');
+            $('#errorMessageModal #errors').html('Il y\'a eu un probleme!');
         }
     });
 }
