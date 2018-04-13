@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "815752f51bb47a8587e736da19ff7d45",
+    "content-hash": "af364e84fd160ce7dde3d0205537324b",
     "packages": [
         {
             "name": "alexpechkarev/geometry-library",
@@ -2430,6 +2430,56 @@
                 "test"
             ],
             "time": "2015-05-11T14:41:42+00:00"
+        },
+        {
+            "name": "laravel/homestead",
+            "version": "v7.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/homestead.git",
+                "reference": "9f3654533723a792df2327b99e127d20be22e725"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/homestead/zipball/9f3654533723a792df2327b99e127d20be22e725",
+                "reference": "9f3654533723a792df2327b99e127d20be22e725",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6 || ^7.0",
+                "symfony/console": "~3.3|~4.0",
+                "symfony/process": "~3.3|~4.0",
+                "symfony/yaml": "~3.3|~4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7 || ^6.0"
+            },
+            "bin": [
+                "bin/homestead"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Homestead\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                }
+            ],
+            "description": "A virtual machine for web artisans.",
+            "time": "2018-03-12T19:16:22+00:00"
         },
         {
             "name": "mockery/mockery",
