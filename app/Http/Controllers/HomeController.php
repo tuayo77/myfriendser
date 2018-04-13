@@ -37,10 +37,10 @@ class HomeController extends Controller
         ];
 
 
-
-
-
-        return view('home', compact('user', 'wall'));
+        return view('home')
+	            ->with(compact('user'))
+	            ->with(compact('wall'))
+	    ;
 
 
     }
