@@ -67,11 +67,11 @@ class RegisterController extends Controller
     {
         $username = $data['username'];
         $password = $data['password'];
-      \Mail::send('emails.send', ['username' => $username, 'password' => $password], function ($message) use ($data)
-        {
-            $message->to($data['email'])->subject ( 'INSCRIPTION REUSSITE' );;
+      // \Mail::send('emails.send', ['username' => $username, 'password' => $password], function ($message) use ($data)
+      //   {
+      //       $message->to($data['email'])->subject('INSCRIPTION REUSSITE');
 
-        });
+      //   });
       return User::create([
             'name' => $data['name'],
             'email' => $data['email'],

@@ -260,7 +260,7 @@ class PostsController extends Controller
 
 
         if ($request->hasFile('image')){
-            $validator_data['image'] = 'required|mimes:jpeg,jpg,png,gif|max:2048';
+            $validator_data['image'] = 'required|mimes:jpeg,jpg,png,gif';
         }else{
             $validator_data['content'] = 'required';
         }

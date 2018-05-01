@@ -1,4 +1,4 @@
-<div class="menu">
+{{-- <div class="menu">
     <ul class="list-group">
         <li class="list-group-item">
             <a href="{{ url('/') }}" class="menu-home">
@@ -25,4 +25,4 @@
             </a>
         </li>
     </ul>
-</div>
+</div> --}}

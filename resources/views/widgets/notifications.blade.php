@@ -1,8 +1,8 @@
-<li class="dropdown direct-messages-notification">
+{{-- <li class="dropdown direct-messages-notification">
     <a href="#" class="dropdown-toggle parent" data-toggle="dropdown" role="button" aria-expanded="false">
         <i class="fa fa-commenting"></i>
     </a>
-</li>
+</li> --}}
 <li class="dropdown">
     <a href="#" class="dropdown-toggle parent" data-toggle="dropdown" role="button" aria-expanded="false">
         @if(count(sHelper::notifications()) > 0)<span class="badge badge-notify">{{ count(sHelper::notifications()) }}</span>@endif

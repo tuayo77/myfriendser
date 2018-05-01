@@ -1,0 +1,6 @@
+/vendor
+/node_modules
+/public/storage/uploads/covers/*
+/public/storage/uploads/posts/*
+/public/storage/uploads/profile_photos/*
+.env
