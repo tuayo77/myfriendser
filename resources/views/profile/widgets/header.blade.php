@@ -27,9 +27,6 @@
                     <div class="profile-text">
                         <h2>{{ $user->name }}</h2>
                         <h4>{{ '@'.$user->username }}</h4>
-                        @if($can_see)
-                            <small>{{ Auth::user()->distance($user) }}</small>
-                        @endif
                     </div>
                     @if($my_profile)
                         <form id="form-upload-cover" enctype="multipart/form-data">

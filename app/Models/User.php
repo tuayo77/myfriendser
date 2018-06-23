@@ -34,10 +34,7 @@ class User extends Authenticatable
         'birthday'
     ];
 
-    public function location(){
-        return $this->hasOne('App\Models\UserLocation', 'user_id', 'id');
-    }
-
+    
     public function relatives(){
         return $this->hasMany('App\Models\UserRelationship', 'main_user_id', 'id');
     }
@@ -114,9 +111,6 @@ class User extends Authenticatable
         if ($this->birthday) return date('Y') - $this->birthday->format('Y');
     }
 
-    public function getLocation(){
-        return "";
-    }
 
     public function getAddress(){
         $location = $this->location()->first();
@@ -131,18 +125,6 @@ class User extends Authenticatable
         if ($all == null) {
             $list = $list->whereNotIn('id', function ($q) {
                 $q->select('following_user_id')->from('user_following')->where('follower_user_id', $this->id);
-            });
-        }
-
-        if ($city_id != null && $hobby_id != null){
-            $list = $list->whereExists(function ($query) use($city_id) {
-                $query->select(DB::raw(1))
-                    ->from('user_locations')
-                    ->whereRaw('users.id = user_locations.user_id and user_locations.city_id = '.$city_id);
-            })->whereExists(function ($query) use($hobby_id) {
-                $query->select(DB::raw(1))
-                    ->from('user_hobbies')
-                    ->whereRaw('users.id = user_hobbies.user_id and user_hobbies.hobby_id = '.$hobby_id);
             });
         }
 
@@ -168,46 +150,6 @@ class User extends Authenticatable
         return false;
     }
 
-    public function distance($user){
-        if ($this->id == $user->id) return "";
-        if ($user){
-            $user_location = $user->location()->get()->first();
-            $my_location = $this->location()->get()->first();
-            if ($user_location && $my_location){
-                return sHelper::distance($my_location->latitud, $my_location->longitud, $user_location->latitud, $user_location->longitud);
-            }
-        }
-        return "";
-    }
-
-    public function findNearby(){
-        $location = $this->location()->get()->first();
-        if (!$location) return false;
-        $lat = $location->latitud;
-        $long = $location->longitud;
-
-        if (empty($lat) || empty($long)) return false;
-
-        $raw = '111.045 * DEGREES(ACOS(COS(RADIANS('.$lat.')) * COS(RADIANS(latitud)) * COS(RADIANS(longitud) - RADIANS('.$long.')) + SIN(RADIANS('.$lat.')) * SIN(RADIANS(latitud))))';
-        $users = UserLocation::select('user_id', 'latitud', 'longitud', 'address',
-            DB::raw($raw.' AS distance'))->with('user')->where('user_id', '!=', $this->id)
-            ->havingRaw('distance < 50')->orderBy('distance', 'ASC')->get();
-
-
-        return $users;
-    }
-
-    public function messagePeopleList(){
-        $list = $this->follower()->where('allow',1)->with('follower')->whereExists(function ($query) {
-            $query->select(DB::raw(1))
-                ->from('user_following as f')
-                ->whereRaw('f.following_user_id = user_following.follower_user_id')
-                ->whereRaw('f.follower_user_id = '.$this->id)
-                ->whereRaw('f.allow = 1');
-        });
-
-        return $list;
-    }
 
     public function hasHobby($hobby_id){
         $check = $this->hobbies()->where('hobby_id', $hobby_id)->get()->first();

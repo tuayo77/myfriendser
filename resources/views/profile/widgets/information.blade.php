@@ -18,12 +18,6 @@
             @endif
             {{ $user->getSex() }}
         </li>
-        @if($user->has('location'))
-        <li class="list-group-item">
-            <i class="fa fa-map-marker"></i>
-            {{ $user->location->city->name }}
-        </li>
-        @endif
         @if ($user->phone)
         <li class="list-group-item">
             <i class="fa fa-mobile"></i>
@@ -109,21 +103,6 @@
 
             <div class="modal-body">
                 <form id="form-profile-information">
-                    <div class="form-group">
-                        <label>Emplacement:</label>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="input-group">
-                                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-map-marker"></i></span>
-                                    <input type="text" class="form-control location-input" readonly value="{{ $user->getAddress() }}" aria-describedby="basic-addon1">
-                                    <input type="hidden" value="" name="map_info" class="map-info">
-                                </div>
-                            </div>
-                            <div class="col-md-12 map-place"></div>
-                        </div>
-                        <div class="clearfix"></div>
-                        <a href="javascript:;" onclick="findMyLocation()">Mettre à jour mon emplacement</a>
-                    </div>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -213,60 +192,6 @@
                 </button>
                 <h5 class="modal-title">Nouvelle relation</h5>
             </div>
-            <form id="form-profile-hobbies" method="post" action="{{ url('/'.$user->username.'/save/relationship') }}">
-
-                {{ csrf_field() }}
-
-
-
-                <div class="modal-body">
-
-                    @if($user->messagePeopleList()->count() == 0)
-                      Personne ne vous suit
-                    @else
-
-                    <div class="form-group">
-                        <label>La personne:</label>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <select class="form-control" name="person" style="width: 100%">
-                                    @foreach($user->messagePeopleList()->get() as $fr)
-                                        <option value="{{ $fr->follower->id }}">{{ $fr->follower->name }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Relation:</label>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <select class="form-control" name="relation" style="width: 100%">
-                                    <option value="0">Mère</option>
-                                    <option value="1">Père</option>
-                                    <option value="2">Époux</option>
-                                    <option value="3">Sœur</option>
-                                    <option value="4">Frère</option>
-                                    <option value="5">Connaissance</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    @endif
-
-                </div>
-
-                <div class="modal-footer">
-                    @if($user->messagePeopleList()->count() > 0)
-                    <button type="submit" class="btn btn-success">sauvegarder</button>
-                    @endif
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-                </div>
-            </form>
-
         </div>
     </div>
 </div>

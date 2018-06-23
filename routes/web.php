@@ -48,12 +48,6 @@ Route::get('/post/{id}', 'PostsController@single');
 Route::get('/search', 'HomeController@search');
 
 
-// Groups
-Route::get('/groups', 'GroupController@index');
-Route::get('/group/{id}', 'GroupController@group');
-Route::get('/group/{id}/stats', 'GroupController@stats');
-
-
 // Follow
 Route::post('/follow', 'FollowController@follow');
 Route::get('/followers/pending', 'FollowController@pending');
@@ -66,24 +60,7 @@ Route::post('/relative/delete', 'RelativesController@delete');
 Route::post('/relative/request', 'RelativesController@relativeRequest');
 
 
-// Nearby
-Route::get('/nearby', 'NearbyController@index');
 
-// Messages
-Route::get('/direct-messages', 'MessagesController@index');
-Route::get('/direct-messages/show/{id}', 'MessagesController@index');
-Route::post('/direct-messages/chat', 'MessagesController@chat');
-Route::post('/direct-messages/send', 'MessagesController@send');
-Route::post('/direct-messages/new-messages', 'MessagesController@newMessages');
-Route::post('/direct-messages/people-list', 'MessagesController@peopleList');
-Route::post('/direct-messages/delete-chat', 'MessagesController@deleteChat');
-Route::post('/direct-messages/delete-message', 'MessagesController@deleteMessage');
-Route::post('/direct-messages/notifications', 'MessagesController@notifications');
-
-// Find Location
-Route::get('/find-my-location', 'FindLocationController@index');
-Route::get('/save-my-location', 'FindLocationController@save');
-Route::get('/save-my-location2', 'FindLocationController@save2');
 
 // Profile
 Route::get('/{username}', 'ProfileController@index');
